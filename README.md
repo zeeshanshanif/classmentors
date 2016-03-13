@@ -6,6 +6,8 @@
 git clone https://github.com/singpath/classmentors.git
 cd classmentors
 npm install
+npm install -g jspm
+jspm install
 ```
 
 Edit `src/index.html` and `build/index.html` to point to the correct Firebase DB id.
