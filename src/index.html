@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class Mentors</title>
+  </head>
+  <body>
+    <classmentors layout="row"></classmentors>
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+
+		<script>
+			window.SINGPATH = {
+				firebaseId: 'singpath-play',
+        singpathURL: 'https://localhost:8080/',
+        backendURL: 'http://localhost:8082'
+			};
+
+      System.import(
+        './app.js'
+      ).catch(
+        console.error.bind(console)
+      );
+		</script>
+  
+  </body>
+</html>

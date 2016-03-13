@@ -1,0 +1,33 @@
+.events th, .events td {
+    text-align: center;
+    padding: 0 10px 0;
+}
+
+.tasks tbody th:first-child {
+    text-align: left;
+    padding-left: 0;
+}
+
+.reversed th.orderer .md-button:after{
+    content: " \25BC";
+    font-size: 12px;
+}
+
+.secondaryReversed th.secondaryOrderer .md-button:after {
+    content: " \25BC";
+    font-size: 12px;
+}
+
+th.orderer .md-button:after, th.secondaryOrderer .md-button:after {
+    content: " \25B2";
+    font-size: 12px;
+}
+
+th.secondaryOrderer .md-button:after {
+    color: #ddd;
+}
+
+.name-button{
+	text-align: left;
+	width: 100%;
+}
