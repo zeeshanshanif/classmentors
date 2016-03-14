@@ -10,9 +10,9 @@ npm install -g jspm
 jspm install
 ```
 
-Edit `src/index.html` and `build/index.html` to point to the correct Firebase DB id.
-By default, the source version points to "singpath-play", the build version to
-"singpath" (our production DB).
+Edit `src/index.html` and `dist/classmentors/index.html` to point to the correct
+Firebase DB id. By default, the source version points to "singpath-play", the
+build version to "singpath" (our production DB).
 
 
 ## Run Dev server
