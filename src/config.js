@@ -13,7 +13,335 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
 
+  depCache: {
+    "app.js": [
+      "angular",
+      "./classmentors/index.js"
+    ],
+    "github:angular/bower-angular@1.5.0.js": [
+      "github:angular/bower-angular@1.5.0/angular"
+    ],
+    "classmentors/index.js": [
+      "./module.js",
+      "./directives.js",
+      "./filters.js",
+      "./services/index.js",
+      "./components/index.js"
+    ],
+    "classmentors/directives.js": [
+      "./module.js"
+    ],
+    "classmentors/filters.js": [
+      "./module.js"
+    ],
+    "classmentors/services/index.js": [
+      "./datastore.js",
+      "./routes.js"
+    ],
+    "classmentors/components/index.js": [
+      "./ace/ace.js",
+      "./classmentors/classmentors.js",
+      "./events/events.js",
+      "./profiles/profiles.js"
+    ],
+    "classmentors/module.js": [
+      "angular",
+      "firebase",
+      "angularfire",
+      "angular-material",
+      "angular-loading-bar",
+      "angular-animate",
+      "angular-messages",
+      "angular-route",
+      "singpath-core"
+    ],
+    "classmentors/services/routes.js": [
+      "../module.js"
+    ],
+    "github:firebase/firebase-bower@2.4.1.js": [
+      "github:firebase/firebase-bower@2.4.1/firebase"
+    ],
+    "classmentors/services/datastore.js": [
+      "babel-runtime/core-js/object/create",
+      "babel-runtime/core-js/object/keys",
+      "babel-runtime/core-js/object/assign",
+      "angular",
+      "../module.js"
+    ],
+    "github:firebase/angularfire@1.1.4.js": [
+      "github:firebase/angularfire@1.1.4/angularfire.js"
+    ],
+    "github:angular/bower-material@1.0.6.js": [
+      "github:angular/bower-material@1.0.6/angular-material"
+    ],
+    "github:chieffancypants/angular-loading-bar@0.8.0.js": [
+      "github:chieffancypants/angular-loading-bar@0.8.0/build/loading-bar"
+    ],
+    "github:angular/bower-angular-animate@1.5.0.js": [
+      "github:angular/bower-angular-animate@1.5.0/angular-animate"
+    ],
+    "github:angular/bower-angular-messages@1.5.0.js": [
+      "github:angular/bower-angular-messages@1.5.0/angular-messages"
+    ],
+    "github:angular/bower-angular-route@1.5.0.js": [
+      "github:angular/bower-angular-route@1.5.0/angular-route"
+    ],
+    "github:singpath/singpath-core@0.1.0.js": [
+      "github:singpath/singpath-core@0.1.0/index.js"
+    ],
+    "classmentors/components/ace/ace.js": [
+      "../../module.js",
+      "./2015-ace-view.html!text"
+    ],
+    "classmentors/components/classmentors/classmentors.js": [
+      "../../module.js",
+      "./classmentors-view.html!text",
+      "./classmentors.css!"
+    ],
+    "classmentors/components/events/events.js": [
+      "babel-runtime/core-js/object/assign",
+      "babel-runtime/core-js/object/keys",
+      "angular",
+      "../../module.js",
+      "./events-view-event-edit.html!text",
+      "./events-view-event-table-participants.html!text",
+      "./events-view-event-table-rank.html!text",
+      "./events-view-event-task-form.html!text",
+      "./events-view-event.html!text",
+      "./events-view-list.html!text",
+      "./events-view-new.html!text",
+      "./events-view-pager.html!text",
+      "./events-view-password.html!text",
+      "./events-view-provide-link.html!text",
+      "./events-view-provide-response.html!text",
+      "./events.css!"
+    ],
+    "classmentors/components/profiles/profiles.js": [
+      "angular",
+      "../../module.js",
+      "./profiles-view-clm-profile.html!text",
+      "./profiles-view-spf-profile.html!text",
+      "./profiles-view-codecombat-lookup-error.html!text",
+      "./profiles-view-edit.html!text",
+      "./profiles-view-show.html!text",
+      "./profiles.css!"
+    ],
+    "npm:babel-runtime@5.8.35/core-js/object/create.js": [
+      "core-js/library/fn/object/create"
+    ],
+    "npm:babel-runtime@5.8.35/core-js/object/keys.js": [
+      "core-js/library/fn/object/keys"
+    ],
+    "npm:babel-runtime@5.8.35/core-js/object/assign.js": [
+      "core-js/library/fn/object/assign"
+    ],
+    "github:firebase/angularfire@1.1.4/angularfire.js": [
+      "firebase",
+      "angular"
+    ],
+    "github:angular/bower-angular-animate@1.5.0/angular-animate.js": [
+      "angular"
+    ],
+    "github:angular/bower-angular-messages@1.5.0/angular-messages.js": [
+      "angular"
+    ],
+    "github:angular/bower-angular-route@1.5.0/angular-route.js": [
+      "angular"
+    ],
+    "github:singpath/singpath-core@0.1.0/index.js": [
+      "./module.js",
+      "./filters.js",
+      "./services/index.js",
+      "./components/index.js",
+      "./shared.css!css"
+    ],
+    "github:angular/bower-material@1.0.6/angular-material.js": [
+      "./angular-material.css!",
+      "angular",
+      "angular-animate",
+      "angular-aria"
+    ],
+    "github:chieffancypants/angular-loading-bar@0.8.0/build/loading-bar.js": [
+      "angular",
+      "./loading-bar.css!"
+    ],
+    "npm:core-js@1.2.6/library/fn/object/create.js": [
+      "../../modules/$"
+    ],
+    "npm:core-js@1.2.6/library/fn/object/keys.js": [
+      "../../modules/es6.object.keys",
+      "../../modules/$.core"
+    ],
+    "npm:core-js@1.2.6/library/fn/object/assign.js": [
+      "../../modules/es6.object.assign",
+      "../../modules/$.core"
+    ],
+    "github:singpath/singpath-core@0.1.0/filters.js": [
+      "babel-runtime/core-js/object/keys",
+      "./module.js"
+    ],
+    "github:singpath/singpath-core@0.1.0/services/index.js": [
+      "./countries.js",
+      "./crypto.js",
+      "./datastore.js",
+      "./firebase.js",
+      "./routes.js",
+      "./icons/icons.js"
+    ],
+    "github:singpath/singpath-core@0.1.0/components/index.js": [
+      "./ace/ace.js",
+      "./alert/alert.js",
+      "./navbar/navbar.js",
+      "./sign/sign.js"
+    ],
+    "github:angular/bower-angular-aria@1.5.0.js": [
+      "github:angular/bower-angular-aria@1.5.0/angular-aria"
+    ],
+    "github:singpath/singpath-core@0.1.0/module.js": [
+      "angular",
+      "firebase",
+      "angularfire",
+      "angular-loading-bar",
+      "angular-animate",
+      "angular-messages",
+      "angular-route",
+      "angular-material"
+    ],
+    "npm:core-js@1.2.6/library/modules/es6.object.keys.js": [
+      "./$.to-object",
+      "./$.object-sap"
+    ],
+    "npm:core-js@1.2.6/library/modules/es6.object.assign.js": [
+      "./$.export",
+      "./$.object-assign"
+    ],
+    "github:singpath/singpath-core@0.1.0/services/countries.js": [
+      "../module.js"
+    ],
+    "github:singpath/singpath-core@0.1.0/services/routes.js": [
+      "babel-runtime/core-js/object/keys",
+      "../module.js"
+    ],
+    "github:singpath/singpath-core@0.1.0/services/crypto.js": [
+      "cryptojs",
+      "cryptojs/md5.js",
+      "cryptojs/pbkdf2.js",
+      "cryptojs/sha256.js",
+      "../module.js"
+    ],
+    "github:singpath/singpath-core@0.1.0/services/datastore.js": [
+      "angular",
+      "../module.js"
+    ],
+    "github:singpath/singpath-core@0.1.0/services/firebase.js": [
+      "babel-runtime/core-js/object/keys",
+      "angular",
+      "firebase",
+      "../module.js"
+    ],
+    "github:angular/bower-angular-aria@1.5.0/angular-aria.js": [
+      "angular"
+    ],
+    "github:singpath/singpath-core@0.1.0/services/icons/icons.js": [
+      "../../module.js",
+      "./svgdefs.svg!text",
+      "./icons-python.svg!text",
+      "./icons-angularjs.svg!text",
+      "./icons-javascript.svg!text",
+      "./icons-java.svg!text"
+    ],
+    "github:singpath/singpath-core@0.1.0/components/ace/ace.js": [
+      "angular",
+      "../../module.js",
+      "ace",
+      "ace/mode-html.js",
+      "ace/mode-java.js",
+      "ace/mode-javascript.js",
+      "ace/mode-python.js",
+      "ace/theme-twilight.js",
+      "./ace.css!css"
+    ],
+    "github:singpath/singpath-core@0.1.0/components/alert/alert.js": [
+      "../../module.js",
+      "./alert-view-toaster.html!text",
+      "./alert.css!text"
+    ],
+    "github:singpath/singpath-core@0.1.0/components/navbar/navbar.js": [
+      "angular",
+      "../../module.js",
+      "./navbar-view.html!text",
+      "./navbar.css!css"
+    ],
+    "github:singpath/singpath-core@0.1.0/components/sign/sign.js": [
+      "babel-runtime/core-js/object/keys",
+      "../../module.js",
+      "./sign-view.html!text"
+    ],
+    "github:sytelus/cryptojs@3.1.2.js": [
+      "github:sytelus/cryptojs@3.1.2/core.js"
+    ],
+    "github:sytelus/cryptojs@3.1.2/md5.js": [
+      "cryptojs/core.js"
+    ],
+    "github:sytelus/cryptojs@3.1.2/pbkdf2.js": [
+      "cryptojs/core.js"
+    ],
+    "github:sytelus/cryptojs@3.1.2/sha256.js": [
+      "cryptojs/core.js"
+    ],
+    "github:ajaxorg/ace-builds@1.2.3.js": [
+      "github:ajaxorg/ace-builds@1.2.3/ace.js"
+    ],
+    "github:ajaxorg/ace-builds@1.2.3/mode-html.js": [
+      "ace/ace.js"
+    ],
+    "github:ajaxorg/ace-builds@1.2.3/mode-java.js": [
+      "ace/ace.js"
+    ],
+    "github:ajaxorg/ace-builds@1.2.3/mode-javascript.js": [
+      "ace/ace.js"
+    ],
+    "github:ajaxorg/ace-builds@1.2.3/mode-python.js": [
+      "ace/ace.js"
+    ],
+    "github:ajaxorg/ace-builds@1.2.3/theme-twilight.js": [
+      "ace/ace.js"
+    ],
+    "npm:core-js@1.2.6/library/modules/$.object-sap.js": [
+      "./$.export",
+      "./$.core",
+      "./$.fails"
+    ],
+    "npm:core-js@1.2.6/library/modules/$.to-object.js": [
+      "./$.defined"
+    ],
+    "npm:core-js@1.2.6/library/modules/$.export.js": [
+      "./$.global",
+      "./$.core",
+      "./$.ctx"
+    ],
+    "npm:core-js@1.2.6/library/modules/$.object-assign.js": [
+      "./$",
+      "./$.to-object",
+      "./$.iobject",
+      "./$.fails"
+    ],
+    "github:sytelus/cryptojs@3.1.2/core.js": [
+      "cryptojs/core.js"
+    ],
+    "github:ajaxorg/ace-builds@1.2.3/ace.js": [
+      "ace/ace.js"
+    ],
+    "npm:core-js@1.2.6/library/modules/$.ctx.js": [
+      "./$.a-function"
+    ],
+    "npm:core-js@1.2.6/library/modules/$.iobject.js": [
+      "./$.cof"
+    ]
+  },
+
   map: {
+    "ace": "github:ajaxorg/ace-builds@1.2.3",
     "angular": "github:angular/bower-angular@1.5.0",
     "angular-animate": "github:angular/bower-angular-animate@1.5.0",
     "angular-loading-bar": "github:chieffancypants/angular-loading-bar@0.8.0",
@@ -25,12 +353,11 @@ System.config({
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "clean-css": "npm:clean-css@3.4.10",
     "core-js": "npm:core-js@1.2.6",
+    "cryptojs": "github:sytelus/cryptojs@3.1.2",
     "css": "github:systemjs/plugin-css@0.1.20",
     "firebase": "github:firebase/firebase-bower@2.4.1",
     "singpath-core": "github:singpath/singpath-core@0.1.0",
     "text": "github:systemjs/plugin-text@0.0.7",
-    "ace": "github:ajaxorg/ace-builds@1.2.3",
-    "cryptojs": "github:sytelus/cryptojs@3.1.2",
     "github:angular/bower-angular-animate@1.5.0": {
       "angular": "github:angular/bower-angular@1.5.0"
     },
@@ -52,6 +379,10 @@ System.config({
     "github:chieffancypants/angular-loading-bar@0.8.0": {
       "angular": "github:angular/bower-angular@1.5.0",
       "css": "github:systemjs/plugin-css@0.1.20"
+    },
+    "github:firebase/angularfire@1.1.4": {
+      "angular": "github:angular/bower-angular@1.5.0",
+      "firebase": "github:firebase/firebase-bower@2.4.1"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"

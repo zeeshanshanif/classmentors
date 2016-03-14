@@ -20,7 +20,7 @@ classMentors.run([
     const backend = $window.SINGPATH && $window.SINGPATH.backendURL || 'http://api.singpath.com/';
 
     clmServicesUrl.singPath = singpath;
-    clmServicesUrl.singPath = backend;
+    clmServicesUrl.backend = backend;
   }
 ]);
 
