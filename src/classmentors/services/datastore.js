@@ -1117,7 +1117,7 @@ classMentors.factory('clmDataStore', [
             }
 
             return $http.get(
-              clmServicesUrl.backendUrl +
+              clmServicesUrl.backend +
               '/proxy/codecombat.com/db/user/' + userId +
               '/level.sessions?project=state.complete,levelID,levelName'
             ).then(function(resp) {
@@ -1293,7 +1293,7 @@ classMentors.factory('clmDataStore', [
             }
 
             return $http.get(
-              clmServicesUrl.backendUrl +
+              clmServicesUrl.backend +
               '/proxy/www.codeschool.com/users/' + userId + '.json'
             ).then(function(resp) {
               return resp.data;
