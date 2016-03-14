@@ -206,6 +206,25 @@
             ]
           }
         }
+      },
+      "github:firebase/angularfire@1.1.4": {
+        "directories": {
+          "lib": "dist"
+        },
+        "main": "angularfire.js",
+        "shim": {
+          "*": {
+            "deps": [
+              "firebase",
+              "angular"
+            ]
+          }
+        },
+        "registry": "jspm",
+        "dependencies": {
+          "angular": "^1.5.0",
+          "firebase": "^2.4.0"
+        }
       }
     }
   }
