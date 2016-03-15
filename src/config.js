@@ -31,6 +31,17 @@ System.config({
     "classmentors/directives.js": [
       "./module.js"
     ],
+    "classmentors/module.js": [
+      "angular",
+      "firebase",
+      "angularfire",
+      "angular-material",
+      "angular-loading-bar",
+      "angular-animate",
+      "angular-messages",
+      "angular-route",
+      "singpath-core"
+    ],
     "classmentors/filters.js": [
       "./module.js"
     ],
@@ -44,32 +55,11 @@ System.config({
       "./events/events.js",
       "./profiles/profiles.js"
     ],
-    "classmentors/module.js": [
-      "angular",
-      "firebase",
-      "angularfire",
-      "angular-material",
-      "angular-loading-bar",
-      "angular-animate",
-      "angular-messages",
-      "angular-route",
-      "singpath-core"
-    ],
-    "classmentors/services/routes.js": [
-      "../module.js"
-    ],
     "github:firebase/firebase-bower@2.4.1.js": [
       "github:firebase/firebase-bower@2.4.1/firebase"
     ],
-    "classmentors/services/datastore.js": [
-      "babel-runtime/core-js/object/create",
-      "babel-runtime/core-js/object/keys",
-      "babel-runtime/core-js/object/assign",
-      "angular",
-      "../module.js"
-    ],
     "github:firebase/angularfire@1.1.4.js": [
-      "github:firebase/angularfire@1.1.4/angularfire.js"
+      "github:firebase/angularfire@1.1.4/dist/angularfire.js"
     ],
     "github:angular/bower-material@1.0.6.js": [
       "github:angular/bower-material@1.0.6/angular-material"
@@ -89,14 +79,24 @@ System.config({
     "github:singpath/singpath-core@0.1.0.js": [
       "github:singpath/singpath-core@0.1.0/index.js"
     ],
-    "classmentors/components/ace/ace.js": [
-      "../../module.js",
-      "./2015-ace-view.html!text"
-    ],
     "classmentors/components/classmentors/classmentors.js": [
       "../../module.js",
       "./classmentors-view.html!text",
       "./classmentors.css!"
+    ],
+    "classmentors/services/datastore.js": [
+      "babel-runtime/core-js/object/create",
+      "babel-runtime/core-js/object/keys",
+      "babel-runtime/core-js/object/assign",
+      "angular",
+      "../module.js"
+    ],
+    "classmentors/components/ace/ace.js": [
+      "../../module.js",
+      "./2015-ace-view.html!text"
+    ],
+    "classmentors/services/routes.js": [
+      "../module.js"
     ],
     "classmentors/components/events/events.js": [
       "babel-runtime/core-js/object/assign",
@@ -126,16 +126,7 @@ System.config({
       "./profiles-view-show.html!text",
       "./profiles.css!"
     ],
-    "npm:babel-runtime@5.8.35/core-js/object/create.js": [
-      "core-js/library/fn/object/create"
-    ],
-    "npm:babel-runtime@5.8.35/core-js/object/keys.js": [
-      "core-js/library/fn/object/keys"
-    ],
-    "npm:babel-runtime@5.8.35/core-js/object/assign.js": [
-      "core-js/library/fn/object/assign"
-    ],
-    "github:firebase/angularfire@1.1.4/angularfire.js": [
+    "github:firebase/angularfire@1.1.4/dist/angularfire.js": [
       "firebase",
       "angular"
     ],
@@ -148,13 +139,6 @@ System.config({
     "github:angular/bower-angular-route@1.5.0/angular-route.js": [
       "angular"
     ],
-    "github:singpath/singpath-core@0.1.0/index.js": [
-      "./module.js",
-      "./filters.js",
-      "./services/index.js",
-      "./components/index.js",
-      "./shared.css!css"
-    ],
     "github:angular/bower-material@1.0.6/angular-material.js": [
       "./angular-material.css!",
       "angular",
@@ -165,20 +149,24 @@ System.config({
       "angular",
       "./loading-bar.css!"
     ],
-    "npm:core-js@1.2.6/library/fn/object/create.js": [
-      "../../modules/$"
+    "github:singpath/singpath-core@0.1.0/index.js": [
+      "./module.js",
+      "./filters.js",
+      "./services/index.js",
+      "./components/index.js",
+      "./shared.css!css"
     ],
-    "npm:core-js@1.2.6/library/fn/object/keys.js": [
-      "../../modules/es6.object.keys",
-      "../../modules/$.core"
+    "npm:babel-runtime@5.8.35/core-js/object/keys.js": [
+      "core-js/library/fn/object/keys"
     ],
-    "npm:core-js@1.2.6/library/fn/object/assign.js": [
-      "../../modules/es6.object.assign",
-      "../../modules/$.core"
+    "npm:babel-runtime@5.8.35/core-js/object/create.js": [
+      "core-js/library/fn/object/create"
     ],
-    "github:singpath/singpath-core@0.1.0/filters.js": [
-      "babel-runtime/core-js/object/keys",
-      "./module.js"
+    "npm:babel-runtime@5.8.35/core-js/object/assign.js": [
+      "core-js/library/fn/object/assign"
+    ],
+    "github:angular/bower-angular-aria@1.5.0.js": [
+      "github:angular/bower-angular-aria@1.5.0/angular-aria"
     ],
     "github:singpath/singpath-core@0.1.0/services/index.js": [
       "./countries.js",
@@ -188,14 +176,15 @@ System.config({
       "./routes.js",
       "./icons/icons.js"
     ],
+    "github:singpath/singpath-core@0.1.0/filters.js": [
+      "babel-runtime/core-js/object/keys",
+      "./module.js"
+    ],
     "github:singpath/singpath-core@0.1.0/components/index.js": [
       "./ace/ace.js",
       "./alert/alert.js",
       "./navbar/navbar.js",
       "./sign/sign.js"
-    ],
-    "github:angular/bower-angular-aria@1.5.0.js": [
-      "github:angular/bower-angular-aria@1.5.0/angular-aria"
     ],
     "github:singpath/singpath-core@0.1.0/module.js": [
       "angular",
@@ -207,13 +196,16 @@ System.config({
       "angular-route",
       "angular-material"
     ],
-    "npm:core-js@1.2.6/library/modules/es6.object.keys.js": [
-      "./$.to-object",
-      "./$.object-sap"
+    "npm:core-js@1.2.6/library/fn/object/keys.js": [
+      "../../modules/es6.object.keys",
+      "../../modules/$.core"
     ],
-    "npm:core-js@1.2.6/library/modules/es6.object.assign.js": [
-      "./$.export",
-      "./$.object-assign"
+    "npm:core-js@1.2.6/library/fn/object/create.js": [
+      "../../modules/$"
+    ],
+    "npm:core-js@1.2.6/library/fn/object/assign.js": [
+      "../../modules/es6.object.assign",
+      "../../modules/$.core"
     ],
     "github:singpath/singpath-core@0.1.0/services/countries.js": [
       "../module.js"
@@ -221,6 +213,9 @@ System.config({
     "github:singpath/singpath-core@0.1.0/services/routes.js": [
       "babel-runtime/core-js/object/keys",
       "../module.js"
+    ],
+    "github:angular/bower-angular-aria@1.5.0/angular-aria.js": [
+      "angular"
     ],
     "github:singpath/singpath-core@0.1.0/services/crypto.js": [
       "cryptojs",
@@ -238,9 +233,6 @@ System.config({
       "angular",
       "firebase",
       "../module.js"
-    ],
-    "github:angular/bower-angular-aria@1.5.0/angular-aria.js": [
-      "angular"
     ],
     "github:singpath/singpath-core@0.1.0/services/icons/icons.js": [
       "../../module.js",
@@ -277,6 +269,14 @@ System.config({
       "../../module.js",
       "./sign-view.html!text"
     ],
+    "npm:core-js@1.2.6/library/modules/es6.object.keys.js": [
+      "./$.to-object",
+      "./$.object-sap"
+    ],
+    "npm:core-js@1.2.6/library/modules/es6.object.assign.js": [
+      "./$.export",
+      "./$.object-assign"
+    ],
     "github:sytelus/cryptojs@3.1.2.js": [
       "github:sytelus/cryptojs@3.1.2/core.js"
     ],
@@ -284,28 +284,29 @@ System.config({
       "cryptojs/core.js"
     ],
     "github:sytelus/cryptojs@3.1.2/pbkdf2.js": [
-      "cryptojs/core.js"
+      "cryptojs/sha1.js",
+      "cryptojs/hmac.js"
     ],
     "github:sytelus/cryptojs@3.1.2/sha256.js": [
       "cryptojs/core.js"
     ],
     "github:ajaxorg/ace-builds@1.2.3.js": [
-      "github:ajaxorg/ace-builds@1.2.3/ace.js"
+      "github:ajaxorg/ace-builds@1.2.3/ace"
     ],
     "github:ajaxorg/ace-builds@1.2.3/mode-html.js": [
-      "ace/ace.js"
+      "ace/ace"
     ],
     "github:ajaxorg/ace-builds@1.2.3/mode-java.js": [
-      "ace/ace.js"
+      "ace/ace"
     ],
     "github:ajaxorg/ace-builds@1.2.3/mode-javascript.js": [
-      "ace/ace.js"
+      "ace/ace"
     ],
     "github:ajaxorg/ace-builds@1.2.3/mode-python.js": [
-      "ace/ace.js"
+      "ace/ace"
     ],
     "github:ajaxorg/ace-builds@1.2.3/theme-twilight.js": [
-      "ace/ace.js"
+      "ace/ace"
     ],
     "npm:core-js@1.2.6/library/modules/$.object-sap.js": [
       "./$.export",
@@ -326,11 +327,11 @@ System.config({
       "./$.iobject",
       "./$.fails"
     ],
-    "github:sytelus/cryptojs@3.1.2/core.js": [
+    "github:sytelus/cryptojs@3.1.2/sha1.js": [
       "cryptojs/core.js"
     ],
-    "github:ajaxorg/ace-builds@1.2.3/ace.js": [
-      "ace/ace.js"
+    "github:sytelus/cryptojs@3.1.2/hmac.js": [
+      "cryptojs/core.js"
     ],
     "npm:core-js@1.2.6/library/modules/$.ctx.js": [
       "./$.a-function"
