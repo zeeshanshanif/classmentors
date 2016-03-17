@@ -1288,7 +1288,7 @@ classMentors.controller('ClmEventTableCtrl', [
           '/paths/' + task.singPathProblem.path.id +
           '/levels/' + task.singPathProblem.level.id +
           '/problems/' + task.singPathProblem.problem.id + '/play'
-        );
+        ).replace(/\/+/, '/');
       }
     };
 

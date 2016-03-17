@@ -1116,11 +1116,11 @@ classMentors.factory('clmDataStore', [
               return $q.reject(clmDataStore.services.codeCombat.errNoUserId);
             }
 
-            return $http.get(
-              clmServicesUrl.backend +
-              '/proxy/codecombat.com/db/user/' + userId +
-              '/level.sessions?project=state.complete,levelID,levelName'
-            ).then(function(resp) {
+            return $http.get([
+              clmServicesUrl.backend,
+              'proxy/codecombat.com/db/user', userId,
+              'level.sessions?project=state.complete,levelID,levelName'
+            ].join('/').replace(/\/+/, '/')).then(function(resp) {
               return resp.data;
             });
           },
@@ -1292,10 +1292,11 @@ classMentors.factory('clmDataStore', [
               return $q.reject(clmDataStore.services.codeSchool.errNoUserId);
             }
 
-            return $http.get(
-              clmServicesUrl.backend +
-              '/proxy/www.codeschool.com/users/' + userId + '.json'
-            ).then(function(resp) {
+            return $http.get([
+              clmServicesUrl.backend,
+              'proxy/www.codeschool.com/users',
+              userId + '.json'
+            ].join('/').replace(/\/+/, '/')).then(function(resp) {
               return resp.data;
             });
           },
@@ -1447,7 +1448,12 @@ classMentors.factory('clmDataStore', [
               all[id] = {
                 id: id,
                 title: levels[id].title,
-                url: clmServicesUrl.singPath + '#/paths/' + pathId + '/levels/' + id + '/problems'
+                url: [
+                  clmServicesUrl.singPath,
+                  '#/paths', pathId,
+                  'levels', id,
+                  'problems'
+                ].join('/').replace(/\/+/, '/')
               };
               return all;
             }, {});
@@ -1468,11 +1474,13 @@ classMentors.factory('clmDataStore', [
               all[id] = {
                 id: id,
                 title: problems[id].title,
-                url: (
-                  clmServicesUrl.singPath + '#/paths/' +
-                  pathId + '/levels/' +
-                  levelId + '/problems/' +
-                  id + '/play')
+                url: [
+                  clmServicesUrl.singPath,
+                  '#/paths', pathId,
+                  'levels', levelId,
+                  'problems', id,
+                  'play'
+                ].join('/').replace(/\/+/, '/')
               };
               return all;
             }, {});
