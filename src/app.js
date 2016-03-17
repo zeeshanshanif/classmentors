@@ -4,11 +4,17 @@ import angular from 'angular';
 import {classMentors} from './classmentors/index.js';
 
 classMentors.config([
+  '$routeProvider',
+  'routes',
   'spfFirebaseRefProvider',
-  function(spfFirebaseRefProvider) {
+  function($routeProvider, routes, spfFirebaseRefProvider) {
     const id = window.SINGPATH && window.SINGPATH.firebaseId || 'singpath';
 
     spfFirebaseRefProvider.setBaseUrl(`https://${id}.firebaseio.com/`);
+
+    $routeProvider.otherwise({
+      redirectTo: routes.home
+    });
   }
 ]);
 
