@@ -21,7 +21,7 @@ cp -r ${BUILD_ASSETS_DIR}/* $BUILD_DEST
 
 echo "Building app bundle..."
 jspm depcache app.js
-jspm build app.js ${BUILD_DEST}/app.js --skip-source-maps
+jspm build app.js ${BUILD_DEST}/app.js --minify --skip-source-maps
 
 # Append hash to app.js
 APP_HASH=$(shasum dist/${APP_NAME}/app.js | cut -c 1-8)
