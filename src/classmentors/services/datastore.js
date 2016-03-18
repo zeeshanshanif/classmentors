@@ -1120,7 +1120,7 @@ classMentors.factory('clmDataStore', [
               clmServicesUrl.backend,
               'proxy/codecombat.com/db/user', userId,
               'level.sessions?project=state.complete,levelID,levelName'
-            ].join('/').replace(/\/+/, '/')).then(function(resp) {
+            ].join('/')).then(function(resp) {
               return resp.data;
             });
           },
@@ -1296,7 +1296,7 @@ classMentors.factory('clmDataStore', [
               clmServicesUrl.backend,
               'proxy/www.codeschool.com/users',
               userId + '.json'
-            ].join('/').replace(/\/+/, '/')).then(function(resp) {
+            ].join('/')).then(function(resp) {
               return resp.data;
             });
           },
@@ -1428,7 +1428,11 @@ classMentors.factory('clmDataStore', [
               all[id] = {
                 id: id,
                 title: paths[id].title,
-                url: clmServicesUrl.singPath + '#/paths/' + id + '/levels'
+                url: [
+                  clmServicesUrl.singPath,
+                  '#/paths', id,
+                  'levels'
+                ].join('/')
               };
               return all;
             }, {});
@@ -1453,7 +1457,7 @@ classMentors.factory('clmDataStore', [
                   '#/paths', pathId,
                   'levels', id,
                   'problems'
-                ].join('/').replace(/\/+/, '/')
+                ].join('/')
               };
               return all;
             }, {});
@@ -1480,7 +1484,7 @@ classMentors.factory('clmDataStore', [
                   'levels', levelId,
                   'problems', id,
                   'play'
-                ].join('/').replace(/\/+/, '/')
+                ].join('/')
               };
               return all;
             }, {});

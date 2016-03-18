@@ -22,11 +22,11 @@ classMentors.run([
   '$window',
   'clmServicesUrl',
   function($window, clmServicesUrl) {
-    const singpath = $window.SINGPATH && $window.SINGPATH.singpathURL || 'http://www.singpath.com/';
-    const backend = $window.SINGPATH && $window.SINGPATH.backendURL || 'http://api.singpath.com/';
+    const singpath = $window.SINGPATH && $window.SINGPATH.singpathURL || 'http://www.singpath.com';
+    const backend = $window.SINGPATH && $window.SINGPATH.backendURL || 'http://api.singpath.com';
 
-    clmServicesUrl.singPath = singpath;
-    clmServicesUrl.backend = backend;
+    clmServicesUrl.singPath = singpath.replace(/\/$/, '');
+    clmServicesUrl.backend = backend.replace(/\/$/, '');
   }
 ]);
 
