@@ -1,43 +1,40 @@
 # Class Mentors UI
 
+
 ## install
 
+Download the last package from the
+[release page](https://github.com/singpath/classmentors/releases),
+extract it, and serve it. E.g. using Python SimpleHTTPServer:
+
+```shell
+wget https://github.com/singpath/classmentors/releases/download/v0.4.2/classmentors.zip
+unzip classmentors.zip
+cd classmentors
+python -m SimpleHTTPServer 8000
+```
+
+Edit `window.SINGPATH.firebaseId` in `index.html` to point to the correct
+Firebase DB id. By default, the build version to "singpath" (our production DB).
+
+
+## Building from source
+
+To build a minified bundles of the singpath apps and its dependencies:
 ```shell
 git clone https://github.com/singpath/classmentors.git
 cd classmentors
 npm install
-```
-
-Edit `src/index.html` and `dist/classmentors/index.html` to point to the correct
-Firebase DB id. By default, the source version points to "singpath-play", the
-build version to "singpath" (our production DB).
-
-
-## Run Dev server
-
-To start a server listening on https://localhost:8081
-```shell
-npm start
-```
-
-
-## Building app bundle
-
-To build a minified bundles of the singpath apps and its dependencies:
-```shell
 npm run build
 ```
 
-To serve it:
+The bundle will be available in `dist/`. To serve it:
 ```shell
 npm run serve-build
 ```
 
 
-## TODO
+## Read more
 
-- add README;
-- add tests;
-- add command to load rules;
-- extract shared services and components to its own package to share it with
-class mentors.
+- [Development](./CONTRIBUTING.md);
+- [Release](./RELEASE.md).
