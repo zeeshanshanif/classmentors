@@ -1,7 +1,7 @@
 # Release
 
 The release package are upload by Travis each time a tag is pushed to
-[singpath/classmentors](https://github.com/singpath/classmentors).
+[singpath/classmentors].
 
 
 ## Pushing new release
@@ -9,7 +9,7 @@ The release package are upload by Travis each time a tag is pushed to
 Bump the `package.json` version number, commit it, create a new tag and push
 the change and the new tag. You can use `npm version major|minor|patch`; e.g.
 assume you cloned the classmentor with upstream pointing to
-[singpath/classmentors]:
+[singpath/classmentors]\:
 ```
 git clone git@github.com:your-username/classmentors.git
 cd classmentors
@@ -40,8 +40,8 @@ gem install travis
 travis setup releases -r singpath/classmentors
 ```
 
-Edit `.travis.yaml` so that deploy.skip_cleanup is set true, deploy.on.repo is
-set to "singpath/classmentors" and deploy.on.tags to true.
+Edit `.travis.yaml` so that `deploy.skip_cleanup` is set true, `deploy.on.repo`
+ is set to "singpath/classmentors" and `deploy.on.tags` to true.
 
 It should look like this:
 ```
@@ -60,3 +60,5 @@ deploy:
     repo: singpath/classmentors
     tags: true
 ```
+
+[singpath/classmentors]: https://github.com/singpath/classmentors

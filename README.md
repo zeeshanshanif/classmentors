@@ -3,7 +3,7 @@
 
 ## Install
 
-Download the last package from the
+Download the lastest package from the
 [release page](https://github.com/singpath/classmentors/releases),
 extract it, and serve it. E.g. using Python SimpleHTTPServer:
 
@@ -15,7 +15,8 @@ python -m SimpleHTTPServer 8000
 ```
 
 Edit `window.SINGPATH.firebaseId` in `index.html` to point to the correct
-Firebase DB id. By default, the build version to "singpath" (our production DB).
+Firebase DB id. By default, the build version points to "singpath"
+(our production DB).
 
 
 ## Building from source

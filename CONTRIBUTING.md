@@ -18,10 +18,10 @@ npm install
 ## Feature branch
 
 Avoid working fixes and new feature in your master branch. It will prevent you
-from submitting focussed pull request or it might prevent you from working
-on more than one fix/feature at a time.
+from submitting focussed pull request or from working on more than one
+fix/feature at a time.
 
-Instead create a branch for each fix or feature:
+Instead, create a branch for each fix or feature:
 ```shell
 git checkout master
 git pull upstream master
@@ -36,7 +36,7 @@ git push origin <branch-name>
 Visit your fork and send a Pull Request from that branch; the PR form URL
 will have this form:
 
-  https://github.com/singpath/classmentors/compare/master...<your-github-username>:<branch-name>
+    https://github.com/singpath/classmentors/compare/master...<your-github-username>:<branch-name>
 
 Once your PR is accepted:
 ```shell
@@ -49,7 +49,7 @@ git pull upstream master
 
 ## Firebase Access
 
-If you don't have access to `singpath` or `singpath-play` Firebase DB, edit
+If you don't have access to `singpath` or `singpath-play` Firebase DBs, edit
 `src/index.html` and `dist/classmentors/index.html` to point to the correct
 Firebase DB id; edit the `window.SINGPATH.firebaseId`. E.g.:
 ```javascript
