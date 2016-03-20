@@ -1,7 +1,7 @@
 # Class Mentors UI
 
 
-## install
+## Install
 
 Download the last package from the
 [release page](https://github.com/singpath/classmentors/releases),
