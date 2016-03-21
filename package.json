@@ -15,6 +15,7 @@
     "http2": "^3.3.2",
     "jscs": "^2.9.0",
     "jspm": "^0.17.0-beta.11",
+    "js-yaml": "^3.5.5",
     "mocha": "^2.4.5",
     "morgan": "^1.7.0",
     "npm-run-all": "^1.5.3",
@@ -35,7 +36,8 @@
     "serve": "./bin/server.js src/",
     "serve-build": "./bin/server.js dist/classmentors",
     "start": "./bin/server.js",
-    "test": "mocha --compilers js:babel/register tests/index"
+    "test": "mocha --compilers js:babel/register tests/index",
+    "travis-setup": "./bin/travis-setup.js"
   },
   "keywords": [],
   "author": "",
