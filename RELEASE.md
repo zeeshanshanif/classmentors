@@ -26,3 +26,4 @@ npm run travis-setup
 ```
 
 [singpath/classmentors]: https://github.com/singpath/classmentors
+
