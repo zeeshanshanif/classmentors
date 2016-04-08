@@ -11,6 +11,11 @@ the change and the new tag. You can use `npm version major|minor|patch` or
 `bin/release`:
 ```
 ./bin/release patch
+
+or 
+
+export NEW_VERSION=$(npm version patch)
+git push origin master $NEW_VERSION
 ```
 
 ## Travis configuration
