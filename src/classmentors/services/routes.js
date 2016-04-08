@@ -10,7 +10,7 @@ import {classMentors} from '../module.js';
  */
 classMentors.constant('routes', {
   //home: '/events',
-  home: '/ace-of-coders',
+  home: '/events',
   aceOfCoders: '/ace-of-coders',
   events: '/events',
   newEvent: '/new-event',
