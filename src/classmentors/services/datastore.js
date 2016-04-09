@@ -1231,10 +1231,10 @@ classMentors.factory('clmDataStore', [
 
               var encodedName = $window.encodeURIComponent(userName);
 
-              return $http.get(
+              return $http.get([
                 clmServicesUrl.backend,
-                'proxy/codecombat.com/db/user/' + encodedName + '/nameToID'
-              ).then(function(resp) {
+                'proxy/codecombat.com/db/user', encodedName , 'nameToID'
+              ].join('/')).then(function(resp) {
                 return {
                   auth: authData,
                   userId: resp.data
