@@ -181,7 +181,7 @@ classMentors.controller('ClmProfileCtrl', [
 
     this.settingPublicId = false;
     this.profileNeedsUpdate = this.currentUser && !this.currentUser.$completed();
-
+    
     function cleanProfile(currentUser) {
       currentUser.country = spfFirebase.cleanObj(currentUser.country);
       currentUser.school = spfFirebase.cleanObj(currentUser.school);
@@ -346,6 +346,10 @@ classMentors.directive('clmProfile', [
               $scope.currentUser.user &&
               $scope.currentUser.user.isAdmin
             );
+          };
+          
+          this.getLength = function(obj) {
+               return Object.keys(obj).length;
           };
 
           this.canRemove = function() {
