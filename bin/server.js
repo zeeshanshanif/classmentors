@@ -26,7 +26,6 @@ const proxy = (req, resp, next) => {
   const remote = `https://${url.slice(7)}`;
 
   https.get(remote, (proxyResp) => {
-    // console.log("%s %j", proxyResp.statusCode, proxyResp.headers);
     const allowedHeaders = new Set(['date', 'content-type', 'content-length', 'vary']);
 
     resp.writeHead(proxyResp.statusCode, Object.keys(proxyResp.headers).reduce((headers, k) => {
@@ -35,7 +34,7 @@ const proxy = (req, resp, next) => {
       }
 
       return headers;
-    }));
+    }, {}));
 
     proxyResp.on('data', chunk => {
       resp.write(chunk, 'bimary');
