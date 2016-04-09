@@ -1540,6 +1540,14 @@ classMentors.controller('ClmEventRankTableCtrl', [
     };
 
     this.rankingView = [];
+    //If there are no ranked services on the event, use the default. 
+    //Add this after the event is fetched if rankedServices is null. 
+    this.rankedServices = [{id:'codeCombat',name:'Code Combat Levels'},
+                           {id:'singPath',name:  'SingPath Problems'},
+                           {id:'codeSchool',name: 'Code School Badges'}
+                           //,{id:'freeCodeCamp',name: 'FreeCodeCamp'}
+                           //,{id:'codeVantage',name:'CodeVantage'}
+                           ];
     this.loading = true;
     this.currentUserRanking = undefined;
     this.orderOpts = [{

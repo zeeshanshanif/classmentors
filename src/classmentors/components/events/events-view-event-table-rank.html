@@ -1,7 +1,6 @@
 <div ng-if="ctrl.loading" layout="row" layout-align="space-around" class="md-padding">
     <md-progress-circular md-mode="indeterminate"></md-progress-circular>
 </div>
-
 <div ng-if="!ctrl.loading">
     <md-content class="md-padding">
         <table class="events ranking">
@@ -20,8 +19,14 @@
                     <th ng-class="{orderer: ctrl.orderOpts[0].key == 'total', secondaryOrderer: ctrl.orderOpts[1].key == 'total'}">
                         <md-button ng-click="ctrl.orderBy('total')">Total</md-button>
                     </th>
+                    <!-- add from rankedServices list -->
+                    <th ng-repeat="service in ctrl.rankedServices" ng-class="{orderer: ctrl.orderOpts[0].key == service.id, secondaryOrderer: ctrl.orderOpts[1].key == service.id}">
+                        <md-button ng-click="ctrl.orderBy(service.id)">{{service.name}}</md-button>
+                    </th>
+  
+                    <!-- Legacy approach to remove. 
                     <th ng-class="{orderer: ctrl.orderOpts[0].key == 'codeCombat', secondaryOrderer: ctrl.orderOpts[1].key == 'codeCombat'}">
-                        <md-button ng-click="ctrl.orderBy('codeCombat')">Code Combat Badges</md-button>
+                        <md-button ng-click="ctrl.orderBy('codeCombat')">Code Combat Levels</md-button>
                     </th>
                     <th ng-class="{orderer: ctrl.orderOpts[0].key == 'codeSchool', secondaryOrderer: ctrl.orderOpts[1].key == 'codeSchool'}">
                         <md-button ng-click="ctrl.orderBy('codeSchool')">Code School Badges</md-button>
@@ -29,6 +34,13 @@
                     <th ng-class="{orderer: ctrl.orderOpts[0].key == 'singPath', secondaryOrderer: ctrl.orderOpts[1].key == 'singPath'}">
                         <md-button ng-click="ctrl.orderBy('singPath')">SingPath Problems</md-button>
                     </th>
+                    <th ng-class="{orderer: ctrl.orderOpts[0].key == 'freeCodeCamp', secondaryOrderer: ctrl.orderOpts[1].key == 'freeCodeCamp'}">
+                        <md-button ng-click="ctrl.orderBy('freeCodeCamp')">FreeCodeCamp</md-button>
+                    </th>
+                    <th ng-class="{orderer: ctrl.orderOpts[0].key == 'codeVantage', secondaryOrderer: ctrl.orderOpts[1].key == 'codeVantage'}">
+                        <md-button ng-click="ctrl.orderBy('codeVantage')">CodeVantage</md-button>
+                    </th>
+                    -->
                 </tr>
             </thead>
             <tbody>
@@ -54,9 +66,15 @@
                     <td ng-if="ctrl.event.schoolEvent">{{ ctrl.currentUserRanking.user.school.name }}</td>
                     <td ng-if="ctrl.event.schoolEvent">{{ ctrl.currentUserRanking.$rankInSchool || 'N/A'}}</td>
                     <td>{{ ctrl.currentUserRanking.total || 0}}</td>
+
+                    <td ng-repeat="service in ctrl.rankedServices">{{ ctrl.currentUserRanking[service.id] || 0 }}</td>
+                    <!--
                     <td>{{ ctrl.currentUserRanking.codeCombat || 0 }}</td>
                     <td>{{ ctrl.currentUserRanking.codeSchool || 0 }}</td>
                     <td>{{ ctrl.currentUserRanking.singPath || 0 }}</td>
+                    <td>{{ ctrl.currentUserRanking.freeCodeCamp || 0 }}</td>
+                    <td>{{ ctrl.currentUserRanking.codeVantage || 0 }}</td>
+                    --> 
                 </tr>
 
                 <tr ng-repeat="participant in ctrl.rankingView track by participant.$id" ng-class="'index-' + $index + ' ' + ($odd ? 'odd' : 'even')">
@@ -76,9 +94,15 @@
                     <td ng-if="ctrl.event.schoolEvent">{{ participant.user.school.name }}</td>
                     <td ng-if="ctrl.event.schoolEvent">{{ participant.$rankInSchool || 'N/A'}}</td>
                     <td>{{ participant.total || 0}}</td>
+                    
+                    <td ng-repeat="service in ctrl.rankedServices">{{ participant[service.id] || 0 }}</td>
+                    <!--
                     <td>{{ participant.codeCombat || 0 }}</td>
                     <td>{{ participant.codeSchool || 0 }}</td>
                     <td>{{ participant.singPath || 0 }}</td>
+                    <td>{{ participant.freeCodeCamp || 0 }}</td>
+                    <td>{{ participant.codeVantage || 0 }}</td>
+                    -->
                 </tr>
 
                 <tr ng-if="ctrl.currentUserRanking &amp;&amp; ctrl.currentUserRanking.$ranking > ctrl.pagerOpts.range.end">
@@ -100,6 +124,8 @@
                     <td>{{ ctrl.currentUserRanking.codeCombat || 0 }}</td>
                     <td>{{ ctrl.currentUserRanking.codeSchool || 0 }}</td>
                     <td>{{ ctrl.currentUserRanking.singPath || 0 }}</td>
+                    <td>{{ ctrl.currentUserRanking.freeCodeCamp || 0 }}</td>
+                    <td>{{ ctrl.currentUserRanking.codeVantage || 0 }}</td>
                 </tr>
             </tbody>
         </table>
