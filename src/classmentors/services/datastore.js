@@ -226,30 +226,21 @@ classMentors.factory('clmService', [
           var knownBadges = service.badges(profile);
 
           return service.fetchBadges(profile).then(function(badges) {
-            return badges.reduce(function(newBadges, badge) {
-              if (!(badge.id in knownBadges)) {
-                newBadges[badge.id] = badge;
-              }
-              return newBadges;
-            }, {});
-          }).then(function(patch) {
-            if (Object.keys(patch).length === 0) {
-              return {};
-            }
-
-            return $q.all([
-              spfFirebase.patch([
-                'classMentors/userProfiles', profile.$id,
-                'services', serviceId, 'badges'
-              ], patch),
-              spfFirebase.set([
-                'classMentors/userProfiles', profile.$id,
-                'services', serviceId, 'lastUpdate'
-              ], {
-                '.sv': 'timestamp'
-              })
-            ]).then(function() {
+            return badges.filter(function(badge) {
+              return !knownBadges[badge.id];
+            });
+          }).then(function(newBadges) {
+            var patchRoot = ['classMentors/userProfiles', profile.$id, 'services', serviceId];
+            var patch = newBadges.reduce(function(patch, badge) {
+              patch['badges/' + badge.id] = badge;
               return patch;
+            }, {lastUpdate: {'.sv': 'timestamp'}});
+
+            return spfFirebase.patch(patchRoot, patch).then(function() {
+              return newBadges.reduce(function(badges, badge) {
+                badges[badge.id] = badge;
+                return badges;
+              }, {});
             });
           });
         },
