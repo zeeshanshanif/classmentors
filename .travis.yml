@@ -3,12 +3,12 @@ branches:
   except:
   - gh-pages
 node_js:
-  - '4.2'
+- '4.2'
 script:
-  - npm run lint
-  - npm run test
+- npm run lint
+- npm run test
 before_deploy:
-  - npm run build
+- npm run build
 deploy:
   provider: releases
   skip_cleanup: true
@@ -19,15 +19,13 @@ deploy:
   api_key:
     secure: Y+v6u5c1ETTuCWhwKSq+iQWb+zvyG5ALP+LQ9Dsvmu33WdTzEA2XrqPESn+C63Ubnt4HKt3bISW6QIn8I6uXS1KAyQpeXkWgJ+W5ZAf4DL/QQkYF9VZSSr7VKZJDRZB5CkzdxnEkjZOPo4OVS4IMS6nmg1tfl4yaJY7GSsI4hTyEcxiTundVWOY9dk8KTstjjKmz1yPQARhXY4tgarA/1DR/SDHNdOLU0WSk8aSbgel1BnHUXctfaHDh+ln3f5h8in2TaZixjiBkkSk8/lPRO98sEXGKZnIFIS/PJD6zSf3+2Cp5+Zd8iOD6E/G7StJ5lIpquTZnB0neHA94a83db6UpkY7ETUdrmzORCYiJ/k/CsQfBd8Hw4KPI96O5ZB3Frw81XP9GexsBxjBLeXrnM7tyBiAgSC/RGcrVOHX2pT7LdbpSlD+K/vbSNsH+Q6J0N6XNtchbETd1DpTPURSpms8zVZpBH33vWXoZ1wSI815QYcPtgPrUMAKK8JnuybeBwEh3yY1vQKEa/OWJwvcZ+vqwyVe3CzZO1GdseNYshB5P83h3UxmCNUbxl997kF946MiLBZ1WVoqHlT2O1MfDxfovqkR1fpwgTmONk0S2l3kc8A0TSCUX2NfNlwmfXtmBfhj3JBaI+S8oqflP4W3GNAyxUUgjFLkdIhEIgcwvpHY=
 before_install:
-  - openssl aes-256-cbc -K $encrypted_89fbf65e7aac_key -iv $encrypted_89fbf65e7aac_iv
+- openssl aes-256-cbc -K $encrypted_89fbf65e7aac_key -iv $encrypted_89fbf65e7aac_iv
   -in id_rsa.enc -out ~\/.ssh/id_rsa -d
-after_sucess:
-  - npm run build
-  - npm run gh-pages-travis
+
 env:
   global:
-    - SSH_KEY="id_rsa"
-    - GIT_NAME="SingaporeClouds"
-    - GIT_EMAIL="SingaporeClouds@gmail.com"
-    - SOURCE_DIR="dist/classmentors"
-    - DEPLOY_BRANCH="master"
+  - SSH_KEY="id_rsa"
+  - GIT_NAME="SingaporeClouds"
+  - GIT_EMAIL="SingaporeClouds@gmail.com"
+  - SOURCE_DIR="dist/classmentors"
+  - DEPLOY_BRANCH="master"
