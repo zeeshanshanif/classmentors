@@ -38,9 +38,7 @@
     "serve-build": "./bin/server.js dist/classmentors",
     "start": "./bin/server.js",
     "test": "mocha --compilers js:babel/register tests/index",
-    "travis-setup": "./bin/travis-setup.js",
-    "gh-pages-travis": "gh-pages-travis"
-
+    "travis-setup": "./bin/travis-setup.js"
   },
   "keywords": [],
   "author": "",
