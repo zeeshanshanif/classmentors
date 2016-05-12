@@ -34,6 +34,7 @@ The bundle will be available in `dist/`. To serve it:
 npm run serve-build
 ```
 
+npm test will run all available tests.
 
 ## Read more
 
