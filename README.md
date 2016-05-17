@@ -23,7 +23,7 @@ Firebase DB id. By default, the build version points to "singpath"
 
 ## Building from source
 
-To build a minified bundles of the singpath apps and its dependencies:
+To locally test and run classmentors:
 ```shell
 git clone https://github.com/singpath/classmentors.git
 cd classmentors
@@ -32,7 +32,7 @@ npm test
 npm start
 ```
 
-To build a release
+To build a minified bundle of classmentors and its dependencies:
 ```shell
 npm run build
 ```
