@@ -1,7 +1,7 @@
 # Class Mentors UI
 
 [![Build Status](https://travis-ci.org/PivotalExpert/classmentors.svg?branch=master)](https://travis-ci.org/PivotalExpert/classmentors)
-[![Coverage Status](https://coveralls.io/repos/github/PivotalExpert/classmentors/badge.svg?branch=master)](https://coveralls.io/github/PivotalExpert/classmentors?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/zeeshanshanif/classmentors/badge.svg?branch=master)](https://coveralls.io/github/zeeshanshanif/classmentors?branch=master)
 
 ## Install
 
