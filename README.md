@@ -28,6 +28,12 @@ To build a minified bundles of the singpath apps and its dependencies:
 git clone https://github.com/singpath/classmentors.git
 cd classmentors
 npm install
+npm test
+npm start
+```
+
+To build a release
+```shell
 npm run build
 ```
 
